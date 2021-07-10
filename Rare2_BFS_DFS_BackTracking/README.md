@@ -104,7 +104,9 @@ bfs 와 플로이드-와샬로 풀 수 있는 문제.
 ### [20927 DegreeBoundedMinimumSpanningTree](20927_DegreeBoundedMinimumSpanningTree.py)
 크루스칼 알고리즘을 이용해서 MST 구해줄 때 간선 개수만 체크해주면 42%에서 틀림.  
 -> 최소비용으로만 돌아서 완전 탐색이 되지않는다.  
-현재 풀이 진행중.  
+완전 탐색하면서 `backtracking` 으로 풀어주면 된다.  
+`global` 변수 처리를 잘해주어야 한다. find-merge 함수에서 `global` 처리를 잘 안해주어서 계속 틀림.  
+ 
 
 
  

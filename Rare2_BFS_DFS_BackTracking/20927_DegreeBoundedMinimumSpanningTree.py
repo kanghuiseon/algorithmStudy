@@ -1,38 +1,41 @@
-
-
+import sys
 def find(x) :
+    global par
     if par[x] == x : return par[x]
     else :
         par[x] = find(par[x])
         return par[x]
 
 def merge(x,y) :
+    global par
     p_x = find(x)
     p_y = find(y)
     if p_x == p_y : return
-    par[p_x] = p_y
+    if p_x > p_y :
+        p_x,p_y = p_y,p_x
+    par[p_y] = p_x
 
 def checkSpan(cost) :
-    global ansC,ansS
+    global ansC,ansS,span,par
     if ansC <= cost : return
     isSpan = True
     par = [i for i in range(N+1)]
     for x,y in span :
         merge(x,y)
-    for c,x,y in adjs :
-        if find(x) != find(y) :
-            isSpan = False
-            break
+    for i in range(2,N+1) :
+        if find(i) != find(1) :
+            return False
+    
     if isSpan :
         ansC = cost
         ansS = span.copy()
 
 def dfs(cur,cnt,cost) :
-    global ansC,ansS
+    global span
     if cnt == N-1 : 
         checkSpan(cost)
         return
-    if cur == M : return 
+    if cur >= M : return 
 
     dfs(cur+1,cnt,cost)
     c,x,y = adjs[cur]
@@ -44,11 +47,16 @@ def dfs(cur,cnt,cost) :
         b[x-1] += 1; b[y-1] += 1
 
 N,M = map(int,input().split())
+if N == 1 :
+    print("YES")
+    sys.exit()
 b = list(map(int,input().split()))
 par = [i for i in range(N+1)]
 adjs = []
 for _ in range(M) :
     x,y,c = map(int,input().split())
+    if x > y : 
+        x,y = y,x
     adjs.append([c,x,y])
 
 ansC,ansS,span = int(1e9),[],[]
