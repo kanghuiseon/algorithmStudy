@@ -1,10 +1,12 @@
-N,K = map(int,input().split())
-num = input()
+
+
+K = 2 
+num = "zbgaj"
 
 stack = []
 
 for n in num :
-    while K and stack and int(stack[-1]) < int(n) :
+    while K and stack and stack[-1] < n :
         stack.pop()
         K -= 1
     stack.append(n)
@@ -13,4 +15,4 @@ while K :
     stack.pop()
     K -= 1
 
-print(int("".join(stack)))
+print(("".join(stack)))
