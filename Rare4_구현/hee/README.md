@@ -47,7 +47,7 @@ void left(){
 }
 ```
 우선 현재 가로줄에 0이 아닌 숫자가 있으면 차례로 queue에 넣어준다.
-![0]()
+![0](https://github.com/kanghuiseon/algorithmStudy/blob/heeseon/Rare4_구현/hee/Resource/0.png)
 
 그림에서처럼 순서대로 넣어준다!
 
