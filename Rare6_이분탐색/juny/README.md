@@ -1,11 +1,11 @@
 # 이분 탐색 (Binary Search)
-> 탐색 기법 중 하나로, 원하는 탐색 범위를 두 부분으로 분할하여 찾는 방법이다.
-> 원래의 전부를 탐색하는 방법-`O(n)`-에 비해 탐색 속도가 빠르다-`O(log(n))`.
-**1.** 이분 탐색을 하기 전 `정렬`을 한다.
-**2.** `left`, `right`로 `mid` 값을 정한다.
-**3.** `mid` 값과 `구하고자 하는 값`을 `비교`한다.
-**4.** 비교할 때, 구하고자 하는 값이 더 크면 `left=mid+1` 로, 더 작으면 `right=mid-1` 로 만들어준다.
-**5.** `left>right` 가 될 때까지 2~4번을 반복한다.
+> 탐색 기법 중 하나로, 원하는 탐색 범위를 두 부분으로 분할하여 찾는 방법이다.  
+원래의 전부를 탐색하는 방법-`O(n)`-에 비해 탐색 속도가 빠르다-`O(log(n))`.  
+**1.** 이분 탐색을 하기 전 `정렬`을 한다.  
+**2.** `left`, `right`로 `mid` 값을 정한다.  
+**3.** `mid` 값과 `구하고자 하는 값`을 `비교`한다.  
+**4.** 비교할 때, 구하고자 하는 값이 더 크면 `left=mid+1` 로, 더 작으면 `right=mid-1` 로 만들어준다.  
+**5.** `left>right` 가 될 때까지 2~4번을 반복한다.  
 
 ## 기본 코드
 ``` c++
@@ -35,11 +35,11 @@ int -> long long 으로 해결했다.
 ### [백준 3020번 개똥벌래](https://github.com/juny9610/algorithmStudy/blob/master/Rare6_이분탐색/juny/3020_개똥벌래.cpp)
 `Lower bound`, `Upper bound`를 사용했다.
 `Lower boud`는 찾고자 하는 key값이 없으면 key값보다 `큰 가장 작은 정수값`을 찾는다.
-> lower_bound(arr, arr+n, key);
-> 반환형이 iterator이므로 vector는 `v.begin()`을 뺀 값으로, 배열은 `배열의 첫번째 주소(배열의 이름)`을 뺀 값으로 위치를 찾는다.
+> lower_bound(arr, arr+n, key);  
+반환형이 iterator이므로 vector는 `v.begin()`을 뺀 값으로, 배열은 `배열의 첫번째 주소(배열의 이름)`을 뺀 값으로 위치를 찾는다.
 `Upper bound`는 찾고자 하는 key값을 `초과하는 가장 첫 번째 값`의 위치를 구한다.
-> upper_bound(arr, arr+n, key);
-> 반환형이 iterator이므로 vector는 `v.begin()`을 뺀 값으로, 배열은 `배열의 첫번째 주소(배열의 이름)`을 뺀 값으로 위치를 찾는다.
+> upper_bound(arr, arr+n, key);  
+반환형이 iterator이므로 vector는 `v.begin()`을 뺀 값으로, 배열은 `배열의 첫번째 주소(배열의 이름)`을 뺀 값으로 위치를 찾는다.
 
 ### [백준 9007번 카누 선수](https://github.com/juny9610/algorithmStudy/blob/master/Rare6_이분탐색/juny/9007_카누선수.cpp)
 단순 구현은 4중 for문이지만 시간 초과에 걸린다.
