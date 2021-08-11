@@ -36,9 +36,11 @@ int -> long long 으로 해결했다.
 `Lower bound`, `Upper bound`를 사용했다.
 `Lower boud`는 찾고자 하는 key값이 없으면 key값보다 `큰 가장 작은 정수값`을 찾는다.
 > lower_bound(arr, arr+n, key);  
+
 반환형이 iterator이므로 vector는 `v.begin()`을 뺀 값으로, 배열은 `배열의 첫번째 주소(배열의 이름)`을 뺀 값으로 위치를 찾는다.
 `Upper bound`는 찾고자 하는 key값을 `초과하는 가장 첫 번째 값`의 위치를 구한다.
 > upper_bound(arr, arr+n, key);  
+
 반환형이 iterator이므로 vector는 `v.begin()`을 뺀 값으로, 배열은 `배열의 첫번째 주소(배열의 이름)`을 뺀 값으로 위치를 찾는다.
 
 ### [백준 9007번 카누 선수](https://github.com/juny9610/algorithmStudy/blob/master/Rare6_이분탐색/juny/9007_카누선수.cpp)
