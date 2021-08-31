@@ -2,7 +2,7 @@
 ## 트리
 ### 정의
 
-![3]()
+![3](https://github.com/kanghuiseon/algorithmStudy/blob/master/Rare5_Tree/Resource/3.png)
 
 * 트리는 하나의 루트 노드를 가지고 있고, 이 루트 노드는 자식 노드를 0개 이상 가지고 있다.
 
@@ -125,11 +125,11 @@ MST를 구현하는 방법에는 두 가지 알고리즘이 있다.
 5. 추출한 간선은 간선 리스트에서 제거
 6. 이 과정을 노드 집합에 모든 노드가 추가될 때까지 반복
 
-![0]()
+![0](https://github.com/kanghuiseon/algorithmStudy/blob/master/Rare5_Tree/Resource/0.png)
 
-![1]()
+![1](https://github.com/kanghuiseon/algorithmStudy/blob/master/Rare5_Tree/Resource/1.png)
 
-![2]()
+![2](https://github.com/kanghuiseon/algorithmStudy/blob/master/Rare5_Tree/Resource/2.png)
 
 ### 시간 복잡도
 1. **인접 행렬** : O(V^2)
